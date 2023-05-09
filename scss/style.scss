@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.loading {
+  background-color: orange;
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  animation: yoqol 1s linear 3s 1 both;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border: 30px dotted black;
+    border-radius: 50%;
+    animation: aylan 1s ease-in-out infinite;
+  }
+}
+
+@keyframes aylan {
+  to {
+    transform: rotate(360deg);
+  }
+  from {
+    transform: rotate(0);
+  }
+}
+
+@keyframes yoqol {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
